@@ -2,6 +2,9 @@
 
 namespace Shapes.Model
 {
+    /// <summary>
+    /// квадрат
+    /// </summary>
     public class Square : IShape
     {
         private readonly int _width;

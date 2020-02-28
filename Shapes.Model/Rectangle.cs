@@ -2,6 +2,9 @@
 
 namespace Shapes.Model
 {
+    /// <summary>
+    /// Прямоугольник
+    /// </summary>
     public class Rectangle : IShape
     {
         private readonly int _width;

@@ -2,9 +2,13 @@
 
 namespace Shapes.Model
 {
+    /// <summary>
+    /// Круг
+    /// </summary>
     public class Circle : IShape
     {
-        private int _width;
+
+        private readonly int _width;
 
 
         public Circle(int width)

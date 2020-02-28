@@ -3,6 +3,9 @@ using System.ComponentModel;
 
 namespace Shapes.Model
 {
+    /// <summary>
+    /// Фабрика фигур. Умеет по имени получить нужный экземпляр фигуры. Решение со Switch case на вид так себе, но для теста пойдет
+    /// </summary>
     public class ShapeFactory
     {
         public static IShape Create(string name, int width, int height)

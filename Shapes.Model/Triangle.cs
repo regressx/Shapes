@@ -3,6 +3,9 @@ using System.Drawing;
 
 namespace Shapes.Model
 {
+    /// <summary>
+    /// Треугольник
+    /// </summary>
     public class Triangle : IShape
     {
         private readonly int _x1;
@@ -12,6 +15,15 @@ namespace Shapes.Model
         private readonly int _x3;
         private readonly int _y3;
 
+        /// <summary>
+        /// Строим по координатам вершин
+        /// </summary>
+        /// <param name="x1">Координата х первой вершины</param>
+        /// <param name="y1">Координата y первой вершины</param>
+        /// <param name="x2">Координата x второй вершины</param>
+        /// <param name="y2">Координата y второй вершины</param>
+        /// <param name="x3">Координата x третьй вершины</param>
+        /// <param name="y3">Координата x третьй вершины</param>
         public Triangle(int x1, int y1, int x2, int y2, int x3, int y3)
         {
             _x1 = x1;
@@ -41,6 +53,7 @@ namespace Shapes.Model
             // создаем Image с максимальными сторонами
             Image image = new Bitmap((int)max,(int)max);
 
+            // треугольник строим по линиям
             using (Graphics gfx = Graphics.FromImage(image))
             {
                 gfx.DrawLine(new Pen(Color.Black),_x1,_y1, _x2,_y2);

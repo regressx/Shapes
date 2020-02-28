@@ -2,6 +2,9 @@
 
 namespace Shapes.Model
 {
+    /// <summary>
+    /// Эллипс
+    /// </summary>
     public class Ellips : IShape
     {
         private int _width;

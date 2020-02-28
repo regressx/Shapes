@@ -3,9 +3,16 @@ using Shapes.Model;
 
 namespace Shapes.Presenters
 {
+
+    /// <summary>
+    /// Представитель главной формы
+    /// </summary>
     public class MainPresenter
     {
-        private IMainView _view;
+        /// <summary>
+        /// интерфейс формы
+        /// </summary>
+        private readonly IMainView _view;
 
         public MainPresenter(IMainView view)
         {
@@ -13,6 +20,11 @@ namespace Shapes.Presenters
             _view.DrawShape += _view_DrawShape;
         }
 
+        /// <summary>
+        /// обработчик события рисования фигуры
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _view_DrawShape(object sender, DrawEventArgs e)
         {
             string shapeType = _view.GetShapeType();
